@@ -17,9 +17,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Run formatter
-      run: cargo fmt --verbose
+      run: cargo fmt --check
     - name: Run linter
-      run: cargo clippy --no-deps
+      run: cargo clippy --all-targets -- -D warnings
     - name: Build
       run: cargo build --verbose
     - name: Run tests
