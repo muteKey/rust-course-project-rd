@@ -3,5 +3,9 @@ name = "rust-course-project-rd"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name="job-queue"
+path="src/main.rs"
+
 [dependencies]
 uuid = { version = "1.29.3", features = ["v4"] }
